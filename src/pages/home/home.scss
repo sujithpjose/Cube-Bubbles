@@ -1,0 +1,43 @@
+.toolbar-select {
+    max-width: 100%;
+    padding: 0 25%;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.toolbar-select .select-icon .select-icon-inner {
+    color: white;
+    top: 70%;
+}
+
+.count-header {
+    background: white;
+    padding: 5px;
+    border-color: #e7eaec;
+    border-width: 4px 0 1px 0;
+    border-style: solid;
+    font-weight: bold;
+}
+
+.count-content h2 {
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+.count-content {
+    background: white;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 11px;
+    min-height: 55px;
+}
+
+.content-divider {
+    border-left: 1px solid #e7eaec;
+}
+
+.count-icon {
+    font-size: 23px;
+    text-align: end;
+}

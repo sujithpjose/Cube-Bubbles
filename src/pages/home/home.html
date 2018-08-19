@@ -1,0 +1,109 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-toolbar>
+      <ion-select class="toolbar-select" [(ngModel)]="selectedApartment" (ionChange)="onApartmentChange()">
+        <ion-option *ngFor="let item of userInfo" [value]="item.apartmentId">{{item.apartmentName}}</ion-option>
+      </ion-select>
+    </ion-toolbar>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="custom-container" padding>
+
+  <ion-grid>
+    <ion-row>
+
+      <!-- Blocks & Units : START -->
+      <ion-col class="count-section" col-12 col-sm-6>
+        <ion-row class="count-header">
+          <ion-col col-10>
+            <span>Blocks & Units</span>
+          </ion-col>
+          <ion-col class="count-icon" col-2>
+            <ion-icon name="home"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row class="count-content">
+          <ion-col col-6>
+            <h2>{{dashboardInfo?.blockCount}}</h2>
+            <span>Blocks</span>
+          </ion-col>
+          <ion-col class="content-divider" col-6>
+            <h2>{{dashboardInfo?.flatCount}}</h2>
+            <span>Units</span>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <!-- Blocks & Units : END -->
+
+      <!-- Members : START -->
+      <ion-col class="count-section" col-12 col-sm-6>
+        <ion-row class="count-header">
+          <ion-col col-10>
+            <span>Members</span>
+          </ion-col>
+          <ion-col class="count-icon" col-2>
+            <ion-icon name="people"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row class="count-content">
+          <ion-col col-6>
+            <h2>{{dashboardInfo?.totalUsers}}</h2>
+            <span>Total</span>
+          </ion-col>
+          <ion-col class="content-divider" col-6>
+            <h2>{{dashboardInfo?.activeUsers}}</h2>
+            <span>Active</span>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <!-- Members : END -->
+
+      <!-- Committe Members : START -->
+      <ion-col class="count-section" col-12 col-sm-6>
+        <ion-row class="count-header">
+          <ion-col col-10>
+            <span>Committe Members</span>
+          </ion-col>
+          <ion-col class="count-icon" col-2>
+            <ion-icon name="megaphone"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row class="count-content">
+          <ion-col col-12>
+            <h2>{{dashboardInfo?.committeMembers}}</h2>
+            <span>Committe Members</span>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <!-- Committe Members : END -->
+
+      <!-- Staff : START -->
+      <ion-col class="count-section" col-12 col-sm-6>
+        <ion-row class="count-header">
+          <ion-col col-10>
+            <span>Staff</span>
+          </ion-col>
+          <ion-col class="count-icon" col-2>
+            <ion-icon name="contacts"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row class="count-content">
+          <ion-col col-6>
+            <h2>{{dashboardInfo?.staffCount}}</h2>
+            <span>Common</span>
+          </ion-col>
+          <ion-col class="content-divider" col-6>
+            <h2>{{dashboardInfo?.unitStaffCount}}</h2>
+            <span>Unit</span>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <!-- Staff : END -->
+
+
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

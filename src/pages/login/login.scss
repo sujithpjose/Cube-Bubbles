@@ -1,0 +1,42 @@
+.login-container {
+    padding: 50px 20px;
+}
+
+.login-wrapper {
+    padding: 15px;
+    background: white;
+}
+
+ion-item {
+    border: none;
+    padding: 0;
+}
+
+ion-input {
+    border: 1px solid #eeeeee;
+}
+
+ion-label {
+    color: #333333;
+    font-size: 16px;
+}
+
+.input-group-spacer {
+    margin-top: 20px;
+}
+
+.login-btn {
+    padding: 0 25px;
+}
+
+.login-btn button {
+    height: 35px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+p.error {
+    color: #ed5565;
+    font-size: 13px;
+    margin: 5px 0;
+}

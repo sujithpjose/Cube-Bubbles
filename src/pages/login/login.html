@@ -1,0 +1,47 @@
+<!-- <ion-header>
+
+  <ion-navbar>
+    <ion-title>login</ion-title>
+  </ion-navbar>
+
+</ion-header> -->
+
+
+<ion-content class="custom-container" padding>
+
+  <div class="login-container">
+    <ion-img width="100%" height="68" src="assets/imgs/cube.png"></ion-img>
+    <h3>Welcome to Cubebubbles</h3>
+    <p>
+      CubeBubbles is a simple, complete apartment management SAAS system giving you detailed view on all aspects related to management
+      and monitoring of your property element from virtually any where in the world. The Web based Engine provides you interface
+      to manage multiple properties.
+    </p>
+
+
+    <ion-list class="login-wrapper">
+
+      <form [formGroup]="loginForm" (ngSubmit)="doLogin()">
+        <div>
+          <ion-label stacked>Email</ion-label>
+          <ion-input placeholder="Enter your Email" type="email" formControlName="username"></ion-input>
+        </div>
+        <p class="error" *ngIf="!loginForm.controls.username.valid && loginForm.controls.username.dirty">Please enter a valid Email.</p>
+
+        <div class="input-group-spacer">
+          <ion-label stacked>Password</ion-label>
+          <ion-input placeholder="Password" type="password" formControlName="password"></ion-input>
+        </div>
+        <p class="error" *ngIf="!loginForm.controls.password.valid && loginForm.controls.password.dirty">Password must have minimum of 4 characters.</p>
+
+        <div class="input-group-spacer login-btn">
+
+          <p class="error" *ngIf="isInvalidUser"> {{errorMsg}} </p>
+          <button ion-button block color="secondary" type="submit" [disabled]=!loginForm.valid>Login</button>
+        </div>
+      </form>
+    </ion-list>
+
+  </div>
+
+</ion-content>
