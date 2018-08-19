@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, IonicPage } from 'ionic-angular';
 
 import { DataStore } from '../../app/services/data.store';
 import { GeneralService } from '../../app/services/general.service';
@@ -8,6 +8,7 @@ import { ApiKeyModel } from '../../app/model/api-key.model';
 import { UserInfoModel } from '../../app/model/userinfo.model';
 import { UserDashBoard } from '../../app/model/user-dashboard.model';
 
+@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'

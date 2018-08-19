@@ -66,7 +66,7 @@ export class LoginPage {
     }
     else {
       this.saveApiKeyModel(userDetails);
-      this.navCtrl.push(HomePage);
+      this.navCtrl.push('HomePage');
     }
   }
 
